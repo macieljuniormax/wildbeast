@@ -11,13 +11,13 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   background-color: rgba(0, 0, 0, 0.1);
   font-family: "Vollkorn", Georgia, "Times New Roman", Times, serif;
-}
-
-img {
-  max-width: 100px;
 }
 
 /* ============================= GRID GERAL ============================= */
@@ -51,6 +51,46 @@ img {
 }
 /* ====================================================================== */
 /* =============================== Header =============================== */
+.header {
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px 60px;
+  color: #ffffff;
+  text-transform: lowercase;
+  font-size: 1.1125em;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.header nav a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.header nav li + li {
+  margin-left: 30px;
+}
 /* ====================================================================== */
 /* ==============================GRID GERAL============================== */
 /* ====================================================================== */
@@ -59,4 +99,4 @@ img {
 /* ==============================GRID GERAL============================== */
 /* ====================================================================== */
 /* ==============================GRID GERAL============================== */
-/* ====================================================================== */
+/* ====================================================================== */ ;
