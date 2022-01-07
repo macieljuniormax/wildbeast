@@ -12,7 +12,9 @@ a {
 }
 
 img {
+  display: block;
   max-width: 100%;
+  border-radius: 10px;
 }
 
 body {
@@ -23,35 +25,20 @@ body {
 /* ============================= GRID GERAL ============================= */
 .estrutura {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-columns: minmax(60px, 1fr) 3fr 300px;
   grid-template-areas:
     "header header header"
     "sidenav content anuncios"
     "footer footer footer";
 }
 
-.header {
-  grid-area: header;
-}
-
-.sidenav {
-  grid-area: sidenav;
-}
-
 .content {
   grid-area: content;
-}
-
-.anuncios {
-  grid-area: anuncios;
-}
-
-.footer {
-  grid-area: footer;
 }
 /* ====================================================================== */
 /* =============================== Header =============================== */
 .header {
+  grid-area: header;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
   padding: 30px;
   display: grid;
@@ -80,7 +67,7 @@ body {
   text-transform: lowercase;
   font-size: 1.1125em;
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 10px;
   transition: 0.5s;
 }
 
@@ -92,11 +79,50 @@ body {
   margin-left: 30px;
 }
 /* ====================================================================== */
-/* ==============================GRID GERAL============================== */
+/* ============================== SIDENAV =============================== */
+.sidenav {
+  grid-area: sidenav;
+  background-color: #fafbfc;
+  padding: 30px;
+}
+
+.sidenav li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: 0.3s ease-out;
+}
+
+.sidenav li a:hover {
+  background: #bb7dfb;
+}
 /* ====================================================================== */
 /* ==============================GRID GERAL============================== */
 /* ====================================================================== */
-/* ==============================GRID GERAL============================== */
+/* ============================== ANUNCIOS ============================== */
+.anuncios {
+  grid-area: anuncios;
+  display: grid;
+  align-content: start;
+  padding: 30px;
+  gap: 30px;
+}
 /* ====================================================================== */
-/* ==============================GRID GERAL============================== */
-/* ====================================================================== */ ;
+/* =============================== FOOTER =============================== */
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+/* ====================================================================== */
